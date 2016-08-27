@@ -23,7 +23,7 @@ namespace dbpRestAPI.Controllers
 
             try
             {
-                MailMessage email = new MailMessage(postedEmail.address, "info@davebrownphotography.com", "Inquiry Email [ " + postedEmail.name + " ] Budget: " + postedEmail.budget, postedEmail.message);
+                MailMessage email = new MailMessage(postedEmail.address, "info@lynzijudish.com", "Inquiry Email [ " + postedEmail.name + " ] Budget: " + postedEmail.budget, postedEmail.message);
                 email.ReplyToList.Add(new MailAddress(postedEmail.address));
 
                 SmtpClient smtpClient = new SmtpClient(ConfigurationManager.AppSettings["SmtpServer"], 587);

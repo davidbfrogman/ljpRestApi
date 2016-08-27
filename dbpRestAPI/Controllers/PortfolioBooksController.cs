@@ -89,6 +89,7 @@ namespace dbpRestAPI.Controllers
         public string GetRefreshPortfolioCache()
         {
             PortfolioCache.CurrentPortfolioBooks = this.GetPortfolioBooksForDisplay().ToList();
+            PortfolioCache.CurrentPortfolioCategories = this.GetPortfolioCategories().ToList();
             return "Successfully updated the portfolio cache";
         }
 
