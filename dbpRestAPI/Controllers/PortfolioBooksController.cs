@@ -45,7 +45,10 @@ namespace dbpRestAPI.Controllers
                 }
                 else
                 {
-                    categories.Add(new PortfolioCategory() { Name = book.Category, Count = 1, Filter =  book.Category.Replace(" ", "") });
+                    if (book.Category != null)
+                    {
+                        categories.Add(new PortfolioCategory() { Name = book.Category, Count = 1, Filter = book.Category.Replace(" ", "") });
+                    }
                 }
             }
             
