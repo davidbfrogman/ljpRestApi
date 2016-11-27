@@ -34,7 +34,7 @@ namespace dbpRestAPI.Controllers
             List<PortfolioCategory> categories = new List<PortfolioCategory>();
             IQueryable<PortfolioBook> books = db.PortfolioBooks;
 
-            categories.Add(new PortfolioCategory() { Name = "All", Count = books.Count(), Filter = "*", Order=0 });
+            //categories.Add(new PortfolioCategory() { Name = "All", Count = books.Count(), Filter = "*", Order=0 });
 
             foreach (var book in books)
             {
